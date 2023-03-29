@@ -1,6 +1,5 @@
 .Gallery {
     width: 100%;
-    background-color: blue;
     display: flex;
     height: auto;
     gap: 32px;

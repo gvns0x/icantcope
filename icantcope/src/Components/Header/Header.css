@@ -1,12 +1,17 @@
 .Header {
     margin-top: 61px;
     padding-top: 212px;
+    margin-bottom: 146px;
 }
 
 .HeaderContentOne {
     margin-bottom: 32px;
+    font-family: 'Pixelcastle', mono;
+    color: #D0D0D0;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .HeaderContentTwo {
-    font-family: 'MeltedPotato';
+    width: 100%;
 }

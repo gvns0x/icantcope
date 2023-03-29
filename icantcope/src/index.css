@@ -13,8 +13,8 @@ code {
 }
 
 @font-face {
-  font-family: "MeltedPotato";
-  src: local("MeltedPotato"),
-   url("./Fonts/MeltedPotato-Regular.otf") format("truetype");
+  font-family: "Pixelcastle";
+  src: local("Pixelcastle"),
+   url("./Fonts/Pixelcastle-Regular.otf") format("truetype");
   font-weight: bold;
   }

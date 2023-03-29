@@ -1,6 +1,5 @@
 .Navbar {
     display: flex;
-    background-color: yellow;
     justify-content: center;
     padding-top: 45px;
     position:fixed;
