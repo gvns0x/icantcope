@@ -12,7 +12,7 @@ class Header extends React.Component {
                     When I look outside it’s dope<br/>
                     Back inside,<br/>
                 </div>
-                <div className='HeaderContentTwo'></div>
+                <div className='HeaderContentTwo'>I can't cope</div>
             </div>
         </div>
     }
