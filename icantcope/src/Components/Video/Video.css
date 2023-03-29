@@ -1,0 +1,10 @@
+.Video {
+    height: auto;
+    max-width: 434px;
+    width: 100%;
+}
+
+.VideoContent {
+    width: 100%;
+    height: auto;
+}
