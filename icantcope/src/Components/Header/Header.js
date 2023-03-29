@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Header/Header.css';
+import '../../Fonts/MeltedPotato-Regular.otf';
 
 class Header extends React.Component {
     render() {
