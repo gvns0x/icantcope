@@ -3,6 +3,7 @@ import './App.css';
 import Gallery from './Components/Gallery/Gallery.js';
 import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header.js';
+import Footer from './Components/Footer/Footer.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +29,8 @@ class App extends React.Component {
         <div className='AppContainer'>
           <Navbar />
           <Header/>
-          <Gallery data={data}/>
+          <Gallery data={data} />
+          <Footer/>
         </div>
       </div>
     );

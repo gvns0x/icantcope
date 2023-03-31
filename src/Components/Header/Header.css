@@ -2,6 +2,12 @@
     margin-top: 61px;
     padding-top: 212px;
     margin-bottom: 146px;
+    display: flex;
+    justify-content: center;
+}
+
+.HeaderContent {
+    max-width: 90%;
 }
 
 .HeaderContentOne {
@@ -12,6 +18,32 @@
     line-height: 20px;
 }
 
-.HeaderContentTwo {
+.LogoDesktop {
+    display: none;
+}
+
+.Logo {
     width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+
+.HeaderContent {
+    max-width: 100%;
+}
+
+.LogoDesktop {
+    display: block;
+}
+
+}
+
+@media screen and (min-width: 600px) {
+    .LogoMobile {
+        display: none;
+    }
+
+    .LogoDesktop {
+        display: block;
+    }
 }
