@@ -1,29 +1,39 @@
+import React from 'react'
 import './App.css';
 import Gallery from './Components/Gallery/Gallery.js';
 import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header.js';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
 
-  useEffect(() => {
+  componentDidMount() {
     fetch('https://api.airtable.com/v0/app546xU983qdu4H0/icantcope', {
       headers: { Authorization: 'Bearer pat97nPdNlmslFunC.84de10acc73690f5e2ba99ff58095065b38e6fa1e9a691b14982623c2ee9ac9d' },
     })
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => this.setState({ data: data.records }))
       .catch(error => console.error(error));
-  }, []);
+  }
 
-  return (
-    <div className="App">
-      <div className='AppContainer'>
-        <Navbar />
-        <Header/>
-        <Gallery />
+  render() {
+    const { data } = this.state;
+    return (
+      <div className="App">
+        <div className='AppContainer'>
+          <Navbar />
+          <Header/>
+          <Gallery data={data}/>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

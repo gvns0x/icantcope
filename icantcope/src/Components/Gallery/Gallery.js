@@ -5,24 +5,24 @@ import Placeholder from '../../Images/Placeholder.png';
 import Vid from '../../Images/SwipeB&W.mov';
 import Video from '../Video/Video.js';
 import axios from 'axios';
-import { useEffect } from 'react';
-
-
 class Gallery extends React.Component {
-    
+
     render() {
+        const { data } = this.props;
+    const items = data.map(item => {
+      if (item.fields.Status === 'Live') {
+        return (
+          <div key={item.id}>
+            <Item url={item.fields.File[0].url} />
+          </div>
+        );
+      } else {
+        return null;
+      }
+    });
+        
         return <div className='Gallery'>
-            <Item url={Placeholder} alt="photo of the weeknd" />
-            <Video url={Vid} />
-            <Item url={Placeholder} alt="photo of the weeknd" />
-            <Item url={Placeholder} alt="photo of the weeknd" />
-            <Item url={Placeholder} alt="photo of the weeknd" />
-            <Item url={Placeholder} alt="photo of the weeknd" />
-            <Item url={Placeholder} alt="photo of the weeknd" />
-            <Item url={Placeholder} alt="photo of the weeknd" />
-            <Item url="https://pyxis.nymag.com/v1/imgs/1d1/117/9af62e05e25ed279f53830b7805ef667ad-The-Weeknd.rsquare.w700.jpg" alt="photo of the weeknd" />
-            <Item url="https://pyxis.nymag.com/v1/imgs/1d1/117/9af62e05e25ed279f53830b7805ef667ad-The-Weeknd.rsquare.w700.jpg" alt="photo of the weeknd" />
-            <Item url="https://pyxis.nymag.com/v1/imgs/1d1/117/9af62e05e25ed279f53830b7805ef667ad-The-Weeknd.rsquare.w700.jpg" alt="photo of the weeknd"/>
+            {items}
         </div>
     }
 }
