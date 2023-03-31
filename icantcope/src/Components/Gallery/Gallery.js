@@ -1,12 +1,15 @@
 import React from 'react';
 import '../Gallery/Gallery.css';
 import Item from '../Item/Item.js';
-import Placeholder from '../../Images/Placeholder.png'
-import Vid from '../../Images/SwipeB&W.mov'
-import Video from '../Video/Video.js'
+import Placeholder from '../../Images/Placeholder.png';
+import Vid from '../../Images/SwipeB&W.mov';
+import Video from '../Video/Video.js';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 
 class Gallery extends React.Component {
+    
     render() {
         return <div className='Gallery'>
             <Item url={Placeholder} alt="photo of the weeknd" />
