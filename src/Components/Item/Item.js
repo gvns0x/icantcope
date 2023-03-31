@@ -5,7 +5,7 @@ class Item extends React.Component {
   render() {
     const type = this.props.type === 'Video';
     const mediaContent = type ? (
-      <video className="ItemContent" autoPlay muted loop>
+      <video className="ItemContent" playsinline autoPlay muted loop>
         <source src={this.props.url} type="video/mp4" />
       </video>
     ) : (
