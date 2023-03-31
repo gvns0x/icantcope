@@ -13,13 +13,15 @@ class Gallery extends React.Component {
       if (item.fields.Status === 'Live') {
         return (
           <div key={item.id}>
-            <Item url={item.fields.File[0].url} />
+            <Item type={item.fields.Type} url={item.fields.File[0].url} />
           </div>
         );
       } else {
         return null;
       }
     });
+        
+        console.log(data)
         
         return <div className='Gallery'>
             {items}
