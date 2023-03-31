@@ -3,7 +3,6 @@ import './App.css';
 import Gallery from './Components/Gallery/Gallery.js';
 import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header.js';
-import { useEffect, useState } from 'react';
 
 class App extends React.Component {
   constructor(props) {
