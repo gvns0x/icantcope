@@ -24,7 +24,7 @@ class Footer extends React.Component {
         return (
             <div className='Footer'>
                 <div className='FooterSubscribe'>
-                    <iframe src="https://icantcope.substack.com/embed" width="480" height="100" frameborder="0"></iframe>
+                    <iframe src="https://icantcope.substack.com/embed" title="Newsletter subscription form" width="480" height="100" frameborder="0"></iframe>
                     {/* <div className='OverlayButton'>
                     <p className='OverlayButtonCopy'>Send it</p>
                 </div> */}
