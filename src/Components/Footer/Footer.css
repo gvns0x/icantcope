@@ -10,7 +10,15 @@
 a {
     font-family: 'Pixelcastle';
     text-decoration: none;
-    color: #d0d0d0;
+    color: #b7b7b7;
+}
+
+.FooterSubscribeDescription {
+    font-family: 'Pixelcastle', monospace;
+    font-size: 16px;
+    color: #b7b7b7;
+    top: -24px;
+    position: relative;
 }
 
 a:hover {
@@ -18,11 +26,33 @@ a:hover {
 }
 
 iframe {
-    background-color: red;
-    font-family: 'Pixelcastle', monospace
+    font-family: 'Pixelcastle', monospace;
 }
 
 .balance-text {
     color: red;
     display: none;
+}
+
+.FooterSubscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+.OverlayButton {
+    background-color: #181A27;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 98px;
+    position: relative;
+    top: -83px;
+    left: 289px;
+    pointer-events: none;
+}
+
+.OverlayButtonCopy {
+    color: #fafafa;
+    font-family: 'Pixelcastle';
+    font-size: 14px;
 }
