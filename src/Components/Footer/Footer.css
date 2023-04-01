@@ -15,7 +15,7 @@ a {
 
 .FooterSubscribeDescription {
     font-family: 'Pixelcastle', monospace;
-    font-size: 16px;
+    font-size: 14px;
     color: #b7b7b7;
     top: -24px;
     position: relative;
@@ -37,6 +37,8 @@ iframe {
 .FooterSubscribe {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .OverlayButton {
@@ -55,4 +57,28 @@ iframe {
     color: #fafafa;
     font-family: 'Pixelcastle';
     font-size: 14px;
+}
+
+.Warning {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+
+.Warning {
+    display: block;
+    padding: 8px;
+    font-family: 'Pixelcastle';
+    border-radius: 4px;
+    color: #181A27;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    /* background-color: #b7b7b7; */
+}
+
+.visible {
+    opacity: 1;
+  }
+
 }
