@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 140px;
 
   /* Styles */
   background-color: #FAFAFA;
@@ -39,6 +40,11 @@
 .App-link {
   color: #61dafb;
 }
+
+/* iframe {
+  border:1px solid #EEE;
+  background:white;
+} */
 
 @keyframes App-logo-spin {
   from {

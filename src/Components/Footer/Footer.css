@@ -1,0 +1,28 @@
+.Footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    font-family: 'Pixelcastle';
+    text-decoration: none;
+    color: #d0d0d0;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+iframe {
+    background-color: red;
+    font-family: 'Pixelcastle', monospace
+}
+
+.balance-text {
+    color: red;
+    display: none;
+}
