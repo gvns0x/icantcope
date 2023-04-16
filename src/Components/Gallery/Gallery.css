@@ -5,4 +5,5 @@
     gap: 32px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: left;
 }
