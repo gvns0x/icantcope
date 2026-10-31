@@ -1,10 +1,67 @@
 .Item {
-    height: auto;
+    position: relative;
     max-width: 434px;
     width: 100%;
+    aspect-ratio: var(--media-w, 1) / var(--media-h, 1);
+    background: #e6e6e6;
+    overflow: hidden;
+}
+
+.Item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        #e6e6e6 0%,
+        #f0f0f0 50%,
+        #e6e6e6 100%
+    );
+    background-size: 200% 100%;
+    animation: item-skeleton-pulse 1.4s ease-in-out infinite;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.Item.is-loaded::after,
+.Item--placeholder.is-loaded::after {
+    opacity: 0;
+}
+
+.Item--placeholder::after {
+    opacity: 1;
 }
 
 .ItemContent {
+    display: block;
+    position: relative;
+    z-index: 1;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.ItemContent.is-loaded {
+    opacity: 1;
+}
+
+@keyframes item-skeleton-pulse {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .Item::after {
+        animation: none;
+    }
+
+    .ItemContent {
+        transition: none;
+    }
 }
